@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "genesis",
+  "version": "${version}",
+  "name": "Genesis",
+  "description": "Mod for Yuta's server",
+  "authors": [
+    "YoloJJ333"
+  ],
+  "contact": {
+    "repo": "https://github.com/YoloJJ333/Genesis.git"
+  },
+  "license": "MIT",
+  "icon": "assets/genesis/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "king.phoenix.client.PhoenixClient"
+    ],
+    "main": [
+      "king.phoenix.Phoenix"
+    ]
+  },
+  "mixins": [
+    "genesis.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric": "*",
+    "minecraft": "1.19"
+  }
+}
