@@ -15,10 +15,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "king.phoenix.client.PhoenixClient"
+      "kingphoenix.genesis.client.GenesisClient"
     ],
     "main": [
-      "king.phoenix.Phoenix"
+      "kingphoenix.genesis.Genesis"
     ]
   },
   "mixins": [
