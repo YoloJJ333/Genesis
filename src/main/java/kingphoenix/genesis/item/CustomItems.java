@@ -5,8 +5,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class CustomItems {
-    public static final Item soulCage = new SoulCage();
+    public static final Item soul_cage = new SoulCage();
     public static void register() {
-        Registry.register(Registry.ITEM, new Identifier("genesis", "soul_cage"), soulCage);
+        Registry.register(Registry.ITEM, new Identifier("genesis", "soul_cage"), soul_cage);
     }
 }

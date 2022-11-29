@@ -1,0 +1,14 @@
+{
+//  Item Groups
+  "itemGroup.genesis.mythical_items": "Mythical Items",
+//  Items
+  "item.genesis.soul_cage": "Soul Cage",
+//  Blocks
+  "block.genesis.moist_block": "Moist Block",
+//  Enchantments
+//  Sound Events
+//  Status Effects
+//  Biomes
+//  Statistics
+  "stat.genesis.souls_collected": "Souls Collected"
+}
