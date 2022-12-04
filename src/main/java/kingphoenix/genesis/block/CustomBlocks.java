@@ -9,24 +9,24 @@ import net.minecraft.util.registry.Registry;
 
 public class CustomBlocks {
 
-    public static final Block moist_carpet = new MoistCarpet();
-    public static final Block mono_wall = new MonoWall();
-    public static final Block old_ceiling = new OldCeiling();
-    public static final Block fluorescent_light = new FluorescentLight();
+    public static final Block MOIST_CARPET = new MoistCarpet();
+    public static final Block MONO_WALL = new MonoWall();
+    public static final Block OLD_CEILING = new OldCeiling();
+    public static final Block FLUORESCENT_LIGHT = new FluorescentLight();
 
 
     public static void register() {
-        Registry.register(Registry.BLOCK, new Identifier("genesis", "moist_carpet"), moist_carpet);
-        Registry.register(Registry.ITEM, new Identifier("genesis", "moist_carpet"), new BlockItem(moist_carpet, new FabricItemSettings().group(Genesis.mythicalItems)));
+        Registry.register(Registry.BLOCK, new Identifier("genesis", "moist_carpet"), MOIST_CARPET);
+        Registry.register(Registry.ITEM, new Identifier("genesis", "moist_carpet"), new BlockItem(MOIST_CARPET, new FabricItemSettings().group(Genesis.MYTHICAL_ITEMS)));
 
-        Registry.register(Registry.BLOCK, new Identifier("genesis", "mono_wall"), mono_wall);
-        Registry.register(Registry.ITEM, new Identifier("genesis", "mono_wall"), new BlockItem(mono_wall, new FabricItemSettings().group(Genesis.mythicalItems)));
+        Registry.register(Registry.BLOCK, new Identifier("genesis", "mono_wall"), MONO_WALL);
+        Registry.register(Registry.ITEM, new Identifier("genesis", "mono_wall"), new BlockItem(MONO_WALL, new FabricItemSettings().group(Genesis.MYTHICAL_ITEMS)));
 
-        Registry.register(Registry.BLOCK, new Identifier("genesis", "old_ceiling"), old_ceiling);
-        Registry.register(Registry.ITEM, new Identifier("genesis", "old_ceiling"), new BlockItem(old_ceiling, new FabricItemSettings().group(Genesis.mythicalItems)));
+        Registry.register(Registry.BLOCK, new Identifier("genesis", "old_ceiling"), OLD_CEILING);
+        Registry.register(Registry.ITEM, new Identifier("genesis", "old_ceiling"), new BlockItem(OLD_CEILING, new FabricItemSettings().group(Genesis.MYTHICAL_ITEMS)));
 
-        Registry.register(Registry.BLOCK, new Identifier("genesis", "fluorescent_light"), fluorescent_light);
-        Registry.register(Registry.ITEM, new Identifier("genesis", "fluorescent_light"), new BlockItem(fluorescent_light, new FabricItemSettings().group(Genesis.mythicalItems)));
+        Registry.register(Registry.BLOCK, new Identifier("genesis", "fluorescent_light"), FLUORESCENT_LIGHT);
+        Registry.register(Registry.ITEM, new Identifier("genesis", "fluorescent_light"), new BlockItem(FLUORESCENT_LIGHT, new FabricItemSettings().group(Genesis.MYTHICAL_ITEMS)));
     }
 
 }
