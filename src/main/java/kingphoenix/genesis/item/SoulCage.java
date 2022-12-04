@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 
 public class SoulCage extends Item {
     public static FabricItemSettings settings = new FabricItemSettings()
-            .group(Genesis.mythicalItems)
+            .group(Genesis.MYTHICAL_ITEMS)
             .maxCount(1)
             .fireproof();
 

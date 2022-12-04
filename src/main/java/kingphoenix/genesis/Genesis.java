@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class Genesis implements ModInitializer {
-    public static final ItemGroup mythicalItems = FabricItemGroupBuilder.create(
+    public static final ItemGroup MYTHICAL_ITEMS = FabricItemGroupBuilder.create(
                     new Identifier("genesis", "mythical_items"))
             .icon(() -> new ItemStack(Blocks.AIR))
             .build();
