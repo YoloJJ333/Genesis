@@ -17,13 +17,13 @@ public class Genesis implements ModInitializer {
                     new Identifier("genesis", "mythical_items"))
             .icon(() -> new ItemStack(Blocks.AIR))
             .build();
-//    public static final Identifier TEST = new Identifier("genesis", "test");
+    public static final Identifier TOTAL_SOULS_COLLECTED = new Identifier("genesis", "souls_collected");
 
     @Override
     public void onInitialize() {
         CustomItems.register();
         CustomBlocks.register();
-//        Registry.register(Registry.CUSTOM_STAT, "test", TEST);
-//        Stats.CUSTOM.getOrCreateStat(TEST, StatFormatter.DEFAULT);
+        Registry.register(Registry.CUSTOM_STAT, "test", TOTAL_SOULS_COLLECTED);
+        Stats.CUSTOM.getOrCreateStat(TOTAL_SOULS_COLLECTED, StatFormatter.DEFAULT);
     }
 }
