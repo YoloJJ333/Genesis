@@ -1,4 +1,4 @@
-package kingphoenix.genesis.item;
+package kingphoenix.genesis;
 
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
@@ -18,7 +18,7 @@ public class DragonToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 10.0F;
+        return 9.0F;
     }
 
     @Override

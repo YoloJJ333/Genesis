@@ -3,8 +3,10 @@
   "itemGroup.genesis.mythical_items": "Mythical Items",
 //  Items
   "item.genesis.soul_cage": "Soul Cage",
+  "item.genesis.dragon_sword": "Dragon Sword",
 //  Blocks
-  "block.genesis.moist_block": "Moist Block",
+  "block.genesis.moist_block": "Moist Carpet",
+  "block.genesis.mono_wall": "Mono Wall",
 //  Enchantments
 //  Sound Events
 //  Status Effects
