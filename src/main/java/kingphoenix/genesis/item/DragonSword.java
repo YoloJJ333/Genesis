@@ -28,7 +28,7 @@ public class DragonSword extends SwordItem{
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        user.playSound(SoundEvents.ENTITY_ENDER_DRAGON_GROWL, 2.5F, 1.0F);
+        user.playSound(SoundEvents.ENTITY_ENDER_DRAGON_GROWL, 2.5F, 1F);
         ItemStack stackInHand = user.getStackInHand(hand);
         stackInHand.decrement(1);
         return TypedActionResult.success(stackInHand);
