@@ -12,5 +12,5 @@
 //  Status Effects
 //  Biomes
 //  Statistics
-  "stat.genesis.souls_collected": "Souls Collected"
+  "stat.genesis.total_souls_collected": "Total Souls Collected"
 }

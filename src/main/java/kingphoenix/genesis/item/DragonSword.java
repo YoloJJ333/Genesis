@@ -12,8 +12,7 @@ public class DragonSword extends SwordItem{
             .group(Genesis.MYTHICAL_ITEMS)
             .group(ItemGroup.COMBAT)
             .maxCount(1)
-            .fireproof()
-            .rarity(Rarity.EPIC);
+            .fireproof();
 
     public DragonSword() {
         super(DragonToolMaterial.INSTANCE, 0, -2.4F, settings);
