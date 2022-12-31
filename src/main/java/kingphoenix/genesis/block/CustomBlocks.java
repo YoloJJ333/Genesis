@@ -27,6 +27,7 @@ public class CustomBlocks {
 
         Registry.register(Registry.BLOCK, new Identifier("genesis", "fluorescent_light"), FLUORESCENT_LIGHT);
         Registry.register(Registry.ITEM, new Identifier("genesis", "fluorescent_light"), new BlockItem(FLUORESCENT_LIGHT, new FabricItemSettings().group(Genesis.MYTHICAL_ITEMS)));
+
     }
 
 }
