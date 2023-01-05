@@ -1,11 +1,12 @@
-package kingphoenix.genesis;
+package kingphoenix.genesis.material;
 
+import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 public class DragonToolMaterial implements ToolMaterial {
-    public static final DragonToolMaterial INSTANCE = new DragonToolMaterial();
+    public static final DragonToolMaterial DRAGON_TOOL_MATERIAL = new DragonToolMaterial();
     @Override
     public int getDurability() {
         return 2139;
@@ -23,7 +24,7 @@ public class DragonToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 5;
+        return MiningLevels.NETHERITE;
     }
 
     @Override

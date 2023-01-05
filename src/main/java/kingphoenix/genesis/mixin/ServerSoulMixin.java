@@ -1,11 +1,12 @@
 package kingphoenix.genesis.mixin;
 
 import com.mojang.authlib.GameProfile;
-import kingphoenix.genesis.Genesis;
+import kingphoenix.genesis.CustomStats;
 import kingphoenix.genesis.item.CustomItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.network.encryption.PlayerPublicKey;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
@@ -37,6 +38,17 @@ public class ServerSoulMixin extends PlayerEntity {
             method = "updateKilledAdvancementCriterion(Lnet/minecraft/entity/Entity;ILnet/minecraft/entity/damage/DamageSource;)V"
     )
     public void addSoul(Entity entityKilled, int score, DamageSource damageSource, CallbackInfo ci) {
-        this.increaseStat(Genesis.TOTAL_SOULS_COLLECTED, this.getInventory().count(CustomItems.SOUL_CAGE));
+        for (int i = 0; i < 36; i++) {
+            ItemStack itemStack = this.getInventory().getStack(i);
+            if (itemStack.getItem().equals(CustomItems.SOUL_CAGE) && itemStack.getDamage() > 0) {
+                itemStack.setDamage(itemStack.getDamage() - 1);
+            }
+        }
+        ItemStack itemStack = this.getInventory().getStack(41);
+        if (itemStack.getItem().equals(CustomItems.SOUL_CAGE) && itemStack.getDamage() > 0) {
+            itemStack.setDamage(itemStack.getDamage() - 1);
+        }
+
+        this.increaseStat(CustomStats.TOTAL_SOULS_COLLECTED, this.getInventory().count(CustomItems.SOUL_CAGE));
     }
 }
