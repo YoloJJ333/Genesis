@@ -7,23 +7,19 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stat.StatFormatter;
-import net.minecraft.stat.Stats;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class Genesis implements ModInitializer {
     public static final ItemGroup MYTHICAL_ITEMS = FabricItemGroupBuilder.create(
                     new Identifier("genesis", "mythical_items"))
             .icon(() -> new ItemStack(Blocks.AIR))
             .build();
-    public static final Identifier TOTAL_SOULS_COLLECTED = new Identifier("genesis", "souls_collected");
 
     @Override
     public void onInitialize() {
         CustomItems.register();
         CustomBlocks.register();
-        Registry.register(Registry.CUSTOM_STAT, "test", TOTAL_SOULS_COLLECTED);
-        Stats.CUSTOM.getOrCreateStat(TOTAL_SOULS_COLLECTED, StatFormatter.DEFAULT);
+//        CustomSounds.register();
+        CustomStats.register();
     }
 }

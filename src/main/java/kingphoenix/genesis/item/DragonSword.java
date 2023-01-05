@@ -1,10 +1,9 @@
 package kingphoenix.genesis.item;
 
-import kingphoenix.genesis.DragonToolMaterial;
+import kingphoenix.genesis.material.DragonToolMaterial;
 import kingphoenix.genesis.Genesis;
 import net.minecraft.item.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.util.Rarity;
 
 public class DragonSword extends SwordItem{
 
@@ -15,6 +14,6 @@ public class DragonSword extends SwordItem{
             .fireproof();
 
     public DragonSword() {
-        super(DragonToolMaterial.INSTANCE, 0, -2.4F, settings);
+        super(DragonToolMaterial.DRAGON_TOOL_MATERIAL, 0, -2.4F, settings);
     }
 }
