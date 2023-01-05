@@ -14,7 +14,6 @@ public class CustomBlocks {
     public static final Block OLD_CEILING = new OldCeiling();
     public static final Block FLUORESCENT_LIGHT = new FluorescentLight();
 
-
     public static void register() {
         Registry.register(Registry.BLOCK, new Identifier("genesis", "moist_carpet"), MOIST_CARPET);
         Registry.register(Registry.ITEM, new Identifier("genesis", "moist_carpet"), new BlockItem(MOIST_CARPET, new FabricItemSettings().group(Genesis.MYTHICAL_ITEMS)));
@@ -27,7 +26,6 @@ public class CustomBlocks {
 
         Registry.register(Registry.BLOCK, new Identifier("genesis", "fluorescent_light"), FLUORESCENT_LIGHT);
         Registry.register(Registry.ITEM, new Identifier("genesis", "fluorescent_light"), new BlockItem(FLUORESCENT_LIGHT, new FabricItemSettings().group(Genesis.MYTHICAL_ITEMS)));
-
     }
 
 }
