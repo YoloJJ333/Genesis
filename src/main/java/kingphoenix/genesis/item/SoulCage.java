@@ -1,24 +1,18 @@
 package kingphoenix.genesis.item;
 
 import kingphoenix.genesis.Genesis;
+import kingphoenix.genesis.material.SoulCageMaterial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableTextContent;
-import net.minecraft.world.World;
+import net.minecraft.item.ToolItem;
 
-import java.util.List;
-
-public class SoulCage extends Item {
+public class SoulCage extends ToolItem {
     public static FabricItemSettings settings = new FabricItemSettings()
             .group(Genesis.MYTHICAL_ITEMS)
             .maxCount(1)
             .fireproof();
 
     public SoulCage() {
-        super(settings);
+        super(SoulCageMaterial.SOUL_CAGE_MATERIAL, settings);
     }
 
 //    @Override
