@@ -5,11 +5,11 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class DragonToolMaterial implements ToolMaterial {
-    public static final DragonToolMaterial DRAGON_TOOL_MATERIAL = new DragonToolMaterial();
+public class SoulShriekerToolMaterial implements ToolMaterial {
+    public static final SoulShriekerToolMaterial SOUL_SHRIEKER_TOOL_MATERIAL = new SoulShriekerToolMaterial();
     @Override
     public int getDurability() {
-        return 2125;
+        return 1500;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class DragonToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 9.0F;
+        return 0.0F;
     }
 
     @Override
@@ -34,6 +34,6 @@ public class DragonToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.ECHO_SHARD);
+        return Ingredient.ofItems(Items.END_CRYSTAL);
     }
 }

@@ -2,6 +2,7 @@ package kingphoenix.genesis.item;
 
 import kingphoenix.genesis.Genesis;
 import kingphoenix.genesis.material.DragonToolMaterial;
+import kingphoenix.genesis.material.SoulShriekerToolMaterial;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -12,7 +13,7 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class DragonSword extends SwordItem{
+public class SoulShrieker extends SwordItem{
 
     public static FabricItemSettings settings = new FabricItemSettings()
             .group(Genesis.MYTHICAL_ITEMS)
@@ -21,17 +22,17 @@ public class DragonSword extends SwordItem{
             .fireproof()
             .rarity(Rarity.EPIC);
 
-    public DragonSword() {
-        super(DragonToolMaterial.DRAGON_TOOL_MATERIAL, 0, -2.4F, settings);
+    public SoulShrieker() {
+        super(SoulShriekerToolMaterial.SOUL_SHRIEKER_TOOL_MATERIAL, 0, -3.0F, settings);
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        user.playSound(SoundEvents.ENTITY_ENDER_DRAGON_GROWL, 2.5F, 1F);
+        user.playSound(SoundEvents.ENTITY_WARDEN_SONIC_CHARGE, 2.5F, 1.5F);
         ItemStack stackInHand = user.getStackInHand(hand);
-        world.addParticle(ParticleTypes.FLAME, user.getX()+1, user.getY()+1.5F, user.getZ(), 0, 0, 0);
-        user.getItemCooldownManager().set(this, 0);
-        stackInHand.damage(25, user, (p) -> {
+        world.addParticle(ParticleTypes.SONIC_BOOM, user.getX()+2.0F, user.getY()+1.5F, user.getZ(), 0, 0, 0);
+        user.getItemCooldownManager().set(this, 200);
+        stackInHand.damage(50, user, (p) -> {
             p.sendToolBreakStatus(hand);
         });
         return TypedActionResult.success(stackInHand);
