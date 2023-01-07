@@ -34,6 +34,6 @@ public class DragonToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.ECHO_SHARD);
+        return Ingredient.ofItems(Items.END_CRYSTAL);
     }
 }

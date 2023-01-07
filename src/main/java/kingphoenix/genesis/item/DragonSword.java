@@ -30,7 +30,7 @@ public class DragonSword extends SwordItem{
         user.playSound(SoundEvents.ENTITY_ENDER_DRAGON_GROWL, 2.5F, 1F);
         ItemStack stackInHand = user.getStackInHand(hand);
         world.addParticle(ParticleTypes.FLAME, user.getX()+1, user.getY()+1.5F, user.getZ(), 0, 0, 0);
-        user.getItemCooldownManager().set(this, 0);
+        user.getItemCooldownManager().set(this, 50);
         stackInHand.damage(25, user, (p) -> {
             p.sendToolBreakStatus(hand);
         });

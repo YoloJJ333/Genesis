@@ -8,9 +8,7 @@ import net.minecraft.recipe.Ingredient;
 public class SoulShriekerToolMaterial implements ToolMaterial {
     public static final SoulShriekerToolMaterial SOUL_SHRIEKER_TOOL_MATERIAL = new SoulShriekerToolMaterial();
     @Override
-    public int getDurability() {
-        return 1500;
-    }
+    public int getDurability() {return 1500;}
 
     @Override
     public float getMiningSpeedMultiplier() {
