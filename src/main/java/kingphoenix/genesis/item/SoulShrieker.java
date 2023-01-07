@@ -1,7 +1,6 @@
 package kingphoenix.genesis.item;
 
 import kingphoenix.genesis.Genesis;
-import kingphoenix.genesis.material.DragonToolMaterial;
 import kingphoenix.genesis.material.SoulShriekerToolMaterial;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -23,7 +22,7 @@ public class SoulShrieker extends SwordItem{
             .rarity(Rarity.EPIC);
 
     public SoulShrieker() {
-        super(SoulShriekerToolMaterial.SOUL_SHRIEKER_TOOL_MATERIAL, 0, -3.0F, settings);
+        super(SoulShriekerToolMaterial.SOUL_SHRIEKER_TOOL_MATERIAL, 0, -2.4F, settings);
     }
 
     @Override
@@ -31,6 +30,9 @@ public class SoulShrieker extends SwordItem{
         user.playSound(SoundEvents.ENTITY_WARDEN_SONIC_CHARGE, 2.5F, 1.5F);
         ItemStack stackInHand = user.getStackInHand(hand);
         world.addParticle(ParticleTypes.SONIC_BOOM, user.getX()+2.0F, user.getY()+1.5F, user.getZ(), 0, 0, 0);
+        world.addParticle(ParticleTypes.SONIC_BOOM, user.getX()+5.0F, user.getY()+1.5F, user.getZ(), 0, 0, 0);
+        world.addParticle(ParticleTypes.SONIC_BOOM, user.getX()+8.0F, user.getY()+1.5F, user.getZ(), 0, 0, 0);
+        world.addParticle(ParticleTypes.SONIC_BOOM, user.getX()+11.0F, user.getY()+1.5F, user.getZ(), 0, 0, 0);
         user.getItemCooldownManager().set(this, 200);
         stackInHand.damage(50, user, (p) -> {
             p.sendToolBreakStatus(hand);
