@@ -14,7 +14,7 @@ public class DragonToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 10.0F;
+        return 1.0F;
     }
 
     @Override

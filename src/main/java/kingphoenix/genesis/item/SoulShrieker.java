@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Rarity;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
@@ -18,8 +17,7 @@ public class SoulShrieker extends SwordItem{
             .group(Genesis.MYTHICAL_ITEMS)
             .group(ItemGroup.COMBAT)
             .maxCount(1)
-            .fireproof()
-            .rarity(Rarity.EPIC);
+            .fireproof();
 
     public SoulShrieker() {
         super(SoulShriekerToolMaterial.SOUL_SHRIEKER_TOOL_MATERIAL, 0, -2.4F, settings);
