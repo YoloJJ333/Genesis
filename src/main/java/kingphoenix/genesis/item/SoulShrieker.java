@@ -27,6 +27,8 @@ public class SoulShrieker extends SwordItem{
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         user.playSound(SoundEvents.ENTITY_WARDEN_SONIC_CHARGE, 2.5F, 1.5F);
         ItemStack stackInHand = user.getStackInHand(hand);
+        user.getPitch();
+        user.getYaw();
         world.addParticle(ParticleTypes.SONIC_BOOM, user.getX()+2.0F, user.getY()+1.5F, user.getZ(), 0, 0, 0);
         world.addParticle(ParticleTypes.SONIC_BOOM, user.getX()+5.0F, user.getY()+1.5F, user.getZ(), 0, 0, 0);
         world.addParticle(ParticleTypes.SONIC_BOOM, user.getX()+8.0F, user.getY()+1.5F, user.getZ(), 0, 0, 0);

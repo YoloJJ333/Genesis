@@ -27,8 +27,8 @@ public class DragonSword extends SwordItem{
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         user.playSound(SoundEvents.ENTITY_ENDER_DRAGON_GROWL, 2.5F, 1F);
         ItemStack stackInHand = user.getStackInHand(hand);
-//        user.getPitch();
-//        user.getYaw();
+        user.getPitch();
+        user.getYaw();
         world.addParticle(ParticleTypes.FLAME, user.getX()+1, user.getY()+1.5F, user.getZ(), 0, 0, 0);
         user.getItemCooldownManager().set(this, 100);
         stackInHand.damage(25, user, (p) -> {

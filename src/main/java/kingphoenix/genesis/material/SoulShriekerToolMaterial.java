@@ -12,7 +12,7 @@ public class SoulShriekerToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 1.0F;
+        return 10.0F;
     }
 
     @Override
